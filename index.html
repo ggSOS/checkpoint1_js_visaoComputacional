@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://docs.opencv.org/4.x/opencv.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Checkpoint de Visão Computacional</title>
+</head>
+
+<body>
+    <header class="fiap-header">
+        <div class="fiap-header__brand">
+            <span class="fiap-header__logo">FIAP</span>
+            <span class="fiap-header__divider"></span>
+            <span class="fiap-header__title">Checkpoint de Visão Computacional</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="stage_panel">
+            <h2>Efeito "retrato" (fundo desfocado)</h2>
+            <div class="upload-row">
+                <input type="file" id="inputImage" accept="img/+">
+                <span class="hint">Dica: use a imagem de exemplo em <code>static/pug.jpg</code></span>
+            </div>
+            <div class="canvas-grid">
+                <div class="canvas-card">
+                    <h3>Gaussian Blur</h3>
+                    <canvas id="canvasGaussianBlur"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Blur</h3>
+                    <canvas id="canvasBlur"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Original com Máscara</h3>
+                    <canvas id="canvasOriginalMascara"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Gaussian Blur com Máscara</h3>
+                    <canvas id="canvasGaussianBlurMascara"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Sobreposição com Gaussian Blur</h3>
+                    <canvas id="canvasGaussianBlurSobreposicao"></canvas>
+                </div>
+                <div class="canvas-card">
+                    <h3>Sobreposição com Original</h3>
+                    <canvas id="canvasOriginalSobreposicao"></canvas>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="btnAlterar" class="btn btn--primary" disabled>Gerar Canvas</button>
+            </div>
+            <p id="status" class="status">Carregando Opencv.js...</p>
+        </section>
+
+        <script src="./script.js" defer></script>
+    </main>
+
+    <footer class="fiap-footer">
+        <p>Checkpoint de Visão Computacional</p>
+    </footer>
+
+</body>
+
+</html>
